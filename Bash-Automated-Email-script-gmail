@@ -1,0 +1,11 @@
+#!/bin/bash
+
+FROM=your-email-here
+TO=destination-email-here
+SERVER=smtp.googlemail.com:587
+USER=first-part-of-email-address-here
+PASS=password-for-email-here
+MESSAGEBODY="your-message-here" 
+SUBJECT="email-subject-here"
+
+sendEmail -f $FROM -t $TO -u $SUBJECT -s $SERVER -xu $USER -xp $PASS -o tls=yes
